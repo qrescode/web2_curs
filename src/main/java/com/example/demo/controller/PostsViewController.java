@@ -21,7 +21,6 @@ public class PostsViewController {
         model.addAttribute("posts", postsService.listAllPosts());
         return "list";
     }
-
     @ResponseBody
     @RequestMapping(path = "/post/{id}", method = RequestMethod.GET)
     public String single(@PathVariable("id") Long id) {
